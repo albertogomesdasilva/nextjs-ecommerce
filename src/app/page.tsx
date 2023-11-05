@@ -1,10 +1,29 @@
-import Image from 'next/image'
+import { ProductType } from "@/types/ProductType";
 
-export default function Home() {
-  return (
-    <div>
-      <h1>PROJETO NEXTJS - E-Commerce</h1>
-    </div>
-  )
+async function getProducts() {
+  const res = await fetch('https://fakestoreapi.com/products');
+  // const res = await fetch('http://177.153.58.250:3333/despesas');
+  if (!res.ok) {
+    throw new Error(res.statusText);
+  }
+
+  return res.json();
 }
 
+export default async function Home() {
+  const products = await getProducts();
+  console.log(products);
+
+
+  return (
+    <div className='max-w-7xl mx-auto pt-8 px-8 xl:px-0'>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6
+          ">
+
+            {products.map(( product: ProductType ) => (
+              <div key={product.id}>{product.description}</div>
+              ))}
+          </div>
+      </div>
+  );
+}

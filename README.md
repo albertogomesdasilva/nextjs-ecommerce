@@ -1,3 +1,13 @@
+https://github.com/clerk/clerk-nextjs-examples/blob/main/examples/widget/db/prisma/schema.prisma
+https://github.com/clerk/clerk-nextjs-examples/blob/main/examples/widget/pages/api/webhooks/user.ts
+https://github.com/pmndrs/zustand
+https://nextjs.org/docs/app/building-your-application/routing/route-handlers
+https://fakestoreapi.com/
+https://clerk.com/?utm_source=www.youtube.com&utm_medium=referral&utm_campaign=none
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
